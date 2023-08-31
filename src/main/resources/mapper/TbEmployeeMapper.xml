@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TbEmployeeMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.domain.TbEmployee">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="INTEGER"/>
+            <result property="birthdayDate" column="birthday_date" jdbcType="DATE"/>
+            <result property="politicsStatus" column="politics_status" jdbcType="VARCHAR"/>
+            <result property="nation" column="nation" jdbcType="VARCHAR"/>
+            <result property="nativePlace" column="native_place" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="positionId" column="position_id" jdbcType="INTEGER"/>
+            <result property="titleId" column="title_id" jdbcType="INTEGER"/>
+            <result property="departmentId" column="department_id" jdbcType="INTEGER"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="employeeNumber" column="employee_number" jdbcType="VARCHAR"/>
+            <result property="education" column="education" jdbcType="VARCHAR"/>
+            <result property="graduationInstitution" column="graduation_institution" jdbcType="VARCHAR"/>
+            <result property="professionalName" column="professional_name" jdbcType="VARCHAR"/>
+            <result property="hireDate" column="hire_date" jdbcType="DATE"/>
+            <result property="probationDate" column="probation_date" jdbcType="DATE"/>
+            <result property="contractStartDate" column="contract_start_date" jdbcType="DATE"/>
+            <result property="contractEndDate" column="contract_end_date" jdbcType="DATE"/>
+            <result property="idcard" column="idcard" jdbcType="VARCHAR"/>
+            <result property="employmentType" column="employment_type" jdbcType="INTEGER"/>
+            <result property="maritalStatus" column="marital_status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,sex,
+        birthday_date,politics_status,nation,
+        native_place,email,address,
+        position_id,title_id,department_id,
+        phone,employee_number,education,
+        graduation_institution,professional_name,hire_date,
+        probation_date,contract_start_date,contract_end_date,
+        idcard,employment_type,marital_status
+    </sql>
+</mapper>

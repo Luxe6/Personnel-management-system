@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 1254541849
+    url: jdbc:mysql://localhost:3306/aojiawei?useUnicode=true&serverTimeZone=UTC
+    username: root
+
+mybatis:
+  mapper-locations: StudentMapper.xml
+
+#添加mybatis-plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印SQL执行详情

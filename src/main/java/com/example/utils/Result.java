@@ -1,0 +1,66 @@
+package com.example.utils;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+//为null的字段不序列化
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Result<T> {
+    /**
+     * 状态码 0表示请求失败 1请求成功
+     */
+    private Integer code;
+    /**
+     * 提示信息，如果有错误时，前端可以获取该字段进行提示
+     */
+    private String msg;
+    /**
+     * 查询到的结果数据，
+     */
+    private T data;
+
+    public Result(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public Result(Integer code, T data) {
+        this.code = code;
+        this.data = data;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public Result setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public Result setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public Result setData(T data) {
+        this.data = data;
+        return this;
+    }
+
+    public Result() {
+    }
+
+    public Result(Integer code, String msg, T data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
+}
